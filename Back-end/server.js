@@ -15,9 +15,15 @@ connectDB();
 connectCloudinary();
 
 app.use(cors({
-  origin: "https://e-commerce-admin-flame-eta.vercel.app",
+  origin: [
+    "https://ecom-admin-tau-jade.vercel.app",
+    "https://e-commerce-admin-flame-eta.vercel.app",
+    "https://ecom-unrw.vercel.app"
+  ],
   credentials: true
 }));
+
+app.use(cors());
 
 // middleware
 app.use(express.json());
