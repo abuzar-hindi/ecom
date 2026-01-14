@@ -14,9 +14,13 @@ const port = process.env.PORT || 4000; // If port is available in process.env.PO
 connectDB();
 connectCloudinary();
 
+app.use(cors({
+  origin: "https://e-commerce-admin-flame-eta.vercel.app",
+  credentials: true
+}));
+
 // middleware
 app.use(express.json());
-app.use(cors());
 
 // API endpoints
 app.use("/api/user", userRouter);       // this means, all the routes (in userRouter) will open at /api/user/{that particular route}
