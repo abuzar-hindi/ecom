@@ -16,14 +16,12 @@ connectCloudinary();
 
 app.use(cors({
   origin: [
-    "https://ecom-admin-tau-jade.vercel.app",
-    "https://e-commerce-admin-flame-eta.vercel.app",
-    "https://ecom-unrw.vercel.app"
+    "https://ecom-ten-henna.vercel.app",      // FRONTEND
+    "https://ecom-admin-tau-jade.vercel.app"  // ADMIN
   ],
   credentials: true
 }));
 
-app.use(cors());
 
 // middleware
 app.use(express.json());
